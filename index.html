@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neha Reddy Annapureddy | Data Analyst</title>
+    <meta name="description" content="Data Analyst with 3+ years of experience in Python, SQL, Tableau, Power BI, and cloud analytics.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="https://neha11reddy.github.io/Portfolio/">
+    <meta property="og:title"       content="Neha Reddy Annapureddy | Data Analyst">
+    <meta property="og:description" content="Data Analyst with 3+ years of experience transforming complex datasets into actionable insights.">
+    <meta property="og:image"       content="https://neha11reddy.github.io/Portfolio/photo.jpg">
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Neha Reddy Annapureddy | Data Analyst">
+    <meta name="twitter:description" content="Data Analyst with 3+ years of experience transforming complex datasets into actionable insights.">
+    <meta name="twitter:image"       content="https://neha11reddy.github.io/Portfolio/photo.jpg">
+
+    <!-- Google Analytics — replace G-251YWER0D9 with your Measurement ID (free at analytics.google.com) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-251YWER0D9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-251YWER0D9');
+    </script>
+
+    <!-- SVG Favicon — "N" in nude pink -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23C9818A'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-weight='700' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
+    <div id="scrollProgress"></div>
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div class="loader" id="loader">
+        <div class="loader-initials">NA</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar" id="loaderBar"></div>
+        </div>
+    </div>
+
+    <!-- ===== CURSOR GLOW ===== -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Neha<span>.</span></a>
+
+            <!-- Desktop resume link -->
+            <a href="Neha Reddy Annapureddy.pdf" class="nav-resume-link" download aria-label="Download Resume">
+                <i class="fas fa-download"></i> Resume
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#dayinlife" class="nav-link">Day in Life</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <!-- Dark mode toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting" data-aos="fade-up" data-aos-delay="50">Hello, I'm</p>
+                <h1 class="hero-name" data-aos="fade-up" data-aos-delay="150">
+                    Neha Reddy<br><em>Annapureddy</em>
+                </h1>
+                <div class="hero-role-wrap" data-aos="fade-up" data-aos-delay="250">
+                    <span class="hero-role" id="heroRole"></span><span class="cursor">|</span>
+                </div>
+                <p class="hero-tagline" data-aos="fade-up" data-aos-delay="350">
+                    Transforming complex datasets into clear, actionable insights<br>that drive strategic business decisions.
+                </p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="450">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="Neha Reddy Annapureddy.pdf" class="btn btn-outline btn-download" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="hero-socials" data-aos="fade-up" data-aos-delay="550">
+                    <a href="https://www.linkedin.com/in/neha-annapureddy/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:annapureddy.neha@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:8565887336" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="hero-photo-wrap">
+                    <div class="hero-photo-frame">
+                        <img src="photo.jpg" alt="Neha Reddy Annapureddy" class="hero-photo">
+                    </div>
+                    <div class="hero-card hero-card-1">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <strong>Churn Prediction</strong>
+                            <span>+26% accuracy</span>
+                        </div>
+                    </div>
+                    <div class="hero-card hero-card-2">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <strong>Data Processed</strong>
+                            <span>1B+ records</span>
+                        </div>
+                    </div>
+                    <div class="hero-card hero-card-3">
+                        <i class="fas fa-bolt"></i>
+                        <div>
+                            <strong>Query Performance</strong>
+                            <span>3x faster</span>
+                        </div>
+                    </div>
+                    <div class="hero-stats-ring">
+                        <div class="ring-stat">
+                            <strong class="counter" data-target="3">0</strong>+
+                            <span>Years Exp.</span>
+                        </div>
+                        <div class="ring-stat">
+                            <strong class="counter" data-target="15">0</strong>+
+                            <span>Projects</span>
+                        </div>
+                        <div class="ring-stat">
+                            <strong class="counter" data-target="10">0</strong>+
+                            <span>Tools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="hero-scroll" aria-label="Scroll down">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Who I Am</p>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid about-grid--no-photo">
+                <div class="about-text" data-aos="fade-up" data-aos-delay="100">
+                    <p>
+                        I'm a <strong>Data Analyst with 3 years of experience</strong> delivering data-driven insights across healthcare and enterprise environments. Currently at <strong>Capital One</strong>, I specialize in building end-to-end analytics solutions — from data pipeline architecture to executive-level dashboards.
+                    </p>
+                    <p>
+                        My work spans predictive modeling, ETL engineering, and BI reporting — always with the goal of turning raw data into stories that drive real decisions. I'm passionate about making data accessible and impactful for stakeholders at every level.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Virginia, USA</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>M.S. Computer Science — VCU</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-circle-check"></i>
+                            <span>Open to new opportunities</span>
+                        </div>
+                    </div>
+                    <a href="mailto:annapureddy.neha@gmail.com" class="btn btn-primary">Hire Me</a>
+                </div>
+                <div class="about-cards" data-aos="fade-left" data-aos-delay="150">
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-chart-area"></i></div>
+                        <h3>Analytics</h3>
+                        <p>Exploratory, inferential &amp; predictive analysis using Python, R, and SQL</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Data Engineering</h3>
+                        <p>ETL pipelines with SSIS, Airflow, Kafka &amp; AWS Glue across cloud and on-prem</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Visualization</h3>
+                        <p>Executive dashboards in Tableau &amp; Power BI that tell compelling data stories</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Machine Learning</h3>
+                        <p>Churn prediction, clustering, regression &amp; A/B testing with Scikit-learn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave: About → Skills -->
+    <div class="wave-divider wave-to-alt" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C150,60 350,60 600,30 C850,0 1050,0 1200,60 L1200,0 L0,0 Z"/>
+        </svg>
+    </div>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="skills section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">What I Know</p>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Radar chart + progress bars row -->
+            <div class="skills-visual-row" data-aos="fade-up" data-aos-delay="50">
+                <!-- Left: Radar Chart -->
+                <div class="skills-radar-wrap">
+                    <h3 class="skills-sub-title">Competency Overview</h3>
+                    <div class="radar-canvas-wrap">
+                        <canvas id="skillsRadar"></canvas>
+                    </div>
+                </div>
+
+                <!-- Right: Progress Bars -->
+                <div class="skills-bars-wrap">
+                    <h3 class="skills-sub-title">Tool Proficiency</h3>
+                    <div class="skill-bars" id="skillBars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label">
+                                <span>Python</span>
+                                <span class="skill-bar-pct">92%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label">
+                                <span>SQL</span>
+                                <span class="skill-bar-pct">90%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label">
+                                <span>Tableau</span>
+                                <span class="skill-bar-pct">88%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label">
+                                <span>Power BI</span>
+                                <span class="skill-bar-pct">85%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label">
+                                <span>Snowflake</span>
+                                <span class="skill-bar-pct">82%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-label">
+                                <span>Apache Spark</span>
+                                <span class="skill-bar-pct">80%</span>
+                            </div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill category tags grid -->
+            <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="50">
+                    <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming &amp; Query</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">R</span>
+                        <span class="tag">Scala</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+                    <h3>Databases &amp; Warehousing</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Snowflake</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Oracle</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="150">
+                    <div class="skill-cat-icon"><i class="fas fa-arrows-rotate"></i></div>
+                    <h3>ETL &amp; Integration</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Apache Airflow</span>
+                        <span class="tag">Apache Kafka</span>
+                        <span class="tag">SSIS</span>
+                        <span class="tag">AWS Glue</span>
+                        <span class="tag">Informatica</span>
+                        <span class="tag">Alteryx</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-cat-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Visualization &amp; BI</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Power BI</span>
+                        <span class="tag">SSRS</span>
+                        <span class="tag">Excel</span>
+                        <span class="tag">Pivot Tables</span>
+                        <span class="tag">Macros</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="250">
+                    <div class="skill-cat-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Forecasting</span>
+                        <span class="tag">Clustering</span>
+                        <span class="tag">Regression</span>
+                        <span class="tag">A/B Testing</span>
+                    </div>
+                </div>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-cat-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud &amp; Big Data</h3>
+                    <div class="skill-tags">
+                        <span class="tag">AWS (EC2, S3, Redshift)</span>
+                        <span class="tag">Azure</span>
+                        <span class="tag">Apache Spark</span>
+                        <span class="tag">Databricks</span>
+                        <span class="tag">MapReduce</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave: Skills → Experience -->
+    <div class="wave-divider wave-to-main" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,60 C150,0 350,0 600,30 C850,60 1050,60 1200,0 L1200,60 L0,60 Z"/>
+        </svg>
+    </div>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Where I've Worked</p>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3>Data Analyst</h3>
+                                <p class="company">Capital One</p>
+                            </div>
+                            <span class="timeline-badge">Aug 2025 – Present</span>
+                        </div>
+                        <p class="timeline-location"><i class="fas fa-location-dot"></i> Virginia, USA</p>
+                        <ul class="timeline-bullets">
+                            <li>Architected end-to-end <strong>AWS Glue</strong> pipelines to ingest and transform multi-source customer data, reducing data latency by <strong>18%</strong>.</li>
+                            <li>Standardized integration of multi-regional datasets into <strong>Snowflake</strong>, reducing processing costs by <strong>21%</strong> and accelerating query performance.</li>
+                            <li>Built predictive models in Python improving churn prediction accuracy by <strong>26%</strong> using structured customer transaction data.</li>
+                            <li>Delivered executive-level <strong>Tableau</strong> dashboards for customer segmentation and lifetime value, improving insight adoption by <strong>30%</strong>.</li>
+                            <li>Implemented real-time streaming pipelines with <strong>Apache Kafka</strong>, improving anomaly detection responsiveness by <strong>25%</strong>.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>AWS Glue</span><span>Snowflake</span><span>Python</span><span>Tableau</span><span>Apache Kafka</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3>Data Analyst</h3>
+                                <p class="company">Infosys</p>
+                            </div>
+                            <span class="timeline-badge">Feb 2022 – Apr 2024</span>
+                        </div>
+                        <p class="timeline-location"><i class="fas fa-location-dot"></i> India</p>
+                        <ul class="timeline-bullets">
+                            <li>Designed normalized relational schemas for public health data marts, improving analytical query performance by <strong>32%</strong> across 6 programs.</li>
+                            <li>Engineered scalable <strong>SSIS</strong> pipelines to ingest and validate multi-source health datasets, reducing manual reconciliation by <strong>25%</strong>.</li>
+                            <li>Produced enterprise <strong>Power BI</strong> dashboards with row-level security, visualizing disease prevalence and vaccination coverage.</li>
+                            <li>Leveraged <strong>Apache Spark</strong> on Databricks to process <strong>500M+</strong> health records, delivering insights <strong>3x faster</strong> than legacy systems.</li>
+                            <li>Implemented MapReduce aggregation to analyze <strong>1B+</strong> unstructured health logs for disease surveillance and forecasting.</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>SSIS</span><span>Power BI</span><span>Apache Spark</span><span>SQL Server</span><span>Databricks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave: Experience → Day in Life -->
+    <div class="wave-divider wave-to-alt" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,0 C150,60 350,60 600,30 C850,0 1050,0 1200,60 L1200,0 L0,0 Z"/>
+        </svg>
+    </div>
+
+    <!-- ===== DAY IN MY DATA LIFE ===== -->
+    <section id="dayinlife" class="dayinlife section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Beyond the Data</p>
+                <h2 class="section-title">A Day in My Data Life</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="day-timeline" data-aos="fade-up" data-aos-delay="50">
+                <div class="day-item">
+                    <div class="day-icon">☕</div>
+                    <div class="day-time">8:00 AM</div>
+                    <div class="day-label">Morning SQL</div>
+                    <p>Coffee in hand, reviewing overnight pipeline logs and writing morning queries</p>
+                </div>
+                <div class="day-connector"></div>
+                <div class="day-item">
+                    <div class="day-icon">📊</div>
+                    <div class="day-time">10:00 AM</div>
+                    <div class="day-label">Dashboard Reviews</div>
+                    <p>KPI syncs with stakeholders, updating Tableau & Power BI dashboards</p>
+                </div>
+                <div class="day-connector"></div>
+                <div class="day-item">
+                    <div class="day-icon">🔧</div>
+                    <div class="day-time">12:00 PM</div>
+                    <div class="day-label">Pipeline Checks</div>
+                    <p>ETL monitoring, data quality validation, and Snowflake query optimization</p>
+                </div>
+                <div class="day-connector"></div>
+                <div class="day-item">
+                    <div class="day-icon">🤖</div>
+                    <div class="day-time">2:00 PM</div>
+                    <div class="day-label">ML &amp; Analysis</div>
+                    <p>Model fine-tuning, A/B test reviews, and exploratory data analysis in Python</p>
+                </div>
+                <div class="day-connector"></div>
+                <div class="day-item">
+                    <div class="day-icon">📈</div>
+                    <div class="day-time">4:00 PM</div>
+                    <div class="day-label">Storytelling</div>
+                    <p>Building executive presentations and translating findings into clear narratives</p>
+                </div>
+                <div class="day-connector"></div>
+                <div class="day-item">
+                    <div class="day-icon">📚</div>
+                    <div class="day-time">6:00 PM</div>
+                    <div class="day-label">Learning</div>
+                    <p>Reading papers, exploring new tools, and contributing to personal projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave: Day in Life → Projects -->
+    <div class="wave-divider wave-to-alt" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,60 C150,0 350,0 600,30 C850,60 1050,60 1200,0 L1200,60 L0,60 Z"/>
+        </svg>
+    </div>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="projects section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">What I've Built</p>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="project-filters" data-aos="fade-up" data-aos-delay="50">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="retail">Retail</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="50" data-cat="finance">
+                    <div class="project-top">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="project-links-top">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>Customer Churn Prediction Dashboard</h3>
+                    <p>Built an end-to-end ML pipeline on <strong>500K+ telecom records</strong> using Random Forest and XGBoost, achieving <strong>89% prediction accuracy</strong>. Integrated results into an interactive Tableau dashboard with customer segmentation and risk scoring.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Scikit-learn</span><span>XGBoost</span><span>SQL</span><span>Tableau</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100" data-cat="healthcare">
+                    <div class="project-top">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="project-links-top">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>Healthcare Fraud Detection System</h3>
+                    <p>Analyzed <strong>2M+ insurance claims</strong> using Python and SQL to identify fraudulent billing patterns. Deployed an anomaly detection model reducing fraudulent claims by <strong>35%</strong>, saving an estimated <strong>$2.4M annually</strong>.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>SQL Server</span><span>Power BI</span><span>Apache Spark</span><span>HIPAA</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="150" data-cat="retail">
+                    <div class="project-top">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-links-top">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>Retail Sales Forecasting &amp; Inventory Optimization</h3>
+                    <p>Developed a time-series forecasting model using Facebook Prophet on multi-store retail data in Snowflake (AWS S3). Reduced overstock by <strong>22%</strong> and improved inventory turnover by <strong>17%</strong> across <strong>120+ store locations</strong>.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Prophet</span><span>Snowflake</span><span>AWS S3</span><span>Tableau</span>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200" data-cat="healthcare">
+                    <div class="project-top">
+                        <div class="project-icon-wrap">
+                            <i class="fas fa-heart-pulse"></i>
+                        </div>
+                        <div class="project-links-top">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>COVID-19 Epidemiological Trend Analysis</h3>
+                    <p>Processed public health datasets across <strong>50 US states</strong> using Apache Spark on Databricks. Built Power BI dashboards tracking case trends, vaccination rates, and hospitalization forecasts for public health stakeholders.</p>
+                    <div class="project-tags">
+                        <span>Apache Spark</span><span>Databricks</span><span>SQL</span><span>Power BI</span><span>Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS & EDUCATION ===== -->
+    <section id="certifications" class="credentials section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">My Credentials</p>
+                <h2 class="section-title">Certifications &amp; Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="credentials-grid">
+                <div class="credentials-col" data-aos="fade-right" data-aos-delay="50">
+                    <h3 class="cred-col-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="cred-list">
+                        <div class="cred-item">
+                            <div class="cred-icon"><i class="fas fa-award"></i></div>
+                            <div class="cred-info">
+                                <h4>Data Analyst using PySpark</h4>
+                                <p>Great Learning</p>
+                            </div>
+                        </div>
+                        <div class="cred-item">
+                            <div class="cred-icon"><i class="fas fa-award"></i></div>
+                            <div class="cred-info">
+                                <h4>Deep Learning on Ramp</h4>
+                                <p>MathWorks</p>
+                            </div>
+                        </div>
+                        <div class="cred-item">
+                            <div class="cred-icon"><i class="fas fa-award"></i></div>
+                            <div class="cred-info">
+                                <h4>Complete Data Analyst Bootcamp</h4>
+                                <p>Udemy</p>
+                            </div>
+                        </div>
+                        <div class="cred-item">
+                            <div class="cred-icon"><i class="fas fa-award"></i></div>
+                            <div class="cred-info">
+                                <h4>Intro to Machine Learning</h4>
+                                <p>Coursera</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="credentials-col" data-aos="fade-left" data-aos-delay="50">
+                    <h3 class="cred-col-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="cred-list">
+                        <div class="cred-item">
+                            <div class="cred-icon edu"><i class="fas fa-university"></i></div>
+                            <div class="cred-info">
+                                <h4>Master's in Computer Science</h4>
+                                <p>Virginia Commonwealth University</p>
+                                <span class="cred-date">Richmond, VA &bull; Aug 2024 – Dec 2025</span>
+                            </div>
+                        </div>
+                        <div class="cred-item">
+                            <div class="cred-icon edu"><i class="fas fa-university"></i></div>
+                            <div class="cred-info">
+                                <h4>Bachelor's in Computer Science</h4>
+                                <p>Presidency University</p>
+                                <span class="cred-date">Bengaluru, India &bull; Aug 2020 – May 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-label">Let's Connect</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="50">
+                    <p class="contact-intro">I'm currently open to new Data Analyst opportunities. Whether you have a question, a project idea, or just want to say hi — my inbox is always open.</p>
+                    <div class="contact-items">
+                        <div class="contact-item contact-item-email">
+                            <a href="mailto:annapureddy.neha@gmail.com" class="contact-item-link">
+                                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-item-text">
+                                    <span>Email</span>
+                                    <p>annapureddy.neha@gmail.com</p>
+                                </div>
+                            </a>
+                            <button class="copy-btn" id="copyEmailBtn" aria-label="Copy email address" title="Copy to clipboard">
+                                <i class="fas fa-copy" id="copyIcon"></i>
+                            </button>
+                        </div>
+                        <a href="https://www.linkedin.com/in/neha-annapureddy/" target="_blank" rel="noopener" class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="contact-item-text">
+                                <span>LinkedIn</span>
+                                <p>neha-annapureddy</p>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="contact-item-text">
+                                <span>Location</span>
+                                <p>Virginia, USA</p>
+                            </div>
+                        </div>
+                        <a href="tel:8565887336" class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-item-text">
+                                <span>Phone</span>
+                                <p>(856) 588-7336</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSeVyKmKC8Qahrve8v-ZVa0IJS7c_Vf_sIeeI38w1K1vBIglDw/formResponse"
+                    method="POST"
+                    target="gform-hidden"
+                    data-aos="fade-left" data-aos-delay="50">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:6px;color:var(--text)">Send Me a Message</h3>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px">Fill out the form and I'll respond within 24 hours.</p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="entry.1584719280" placeholder="Jane Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="entry.1782472928" placeholder="jane@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="entry.618268602" placeholder="Let's connect!" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="entry.591141894" rows="5" placeholder="Hi Neha, I'd love to chat about..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div id="formSuccess" class="form-success" style="display:none">
+                        <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+                    </div>
+                    <div id="formError" class="form-error" style="display:none">
+                        <i class="fas fa-exclamation-circle"></i> Something went wrong. Please try emailing directly.
+                    </div>
+                </form>
+                <!-- Hidden iframe to capture Google Form response without redirect -->
+                <iframe name="gform-hidden" style="display:none"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-copy">Designed &amp; Built by <strong>Neha Reddy Annapureddy</strong> &copy; 2025</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/neha-annapureddy/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:annapureddy.neha@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--
+    =====================================================
+    EmailJS SETUP INSTRUCTIONS
+    =====================================================
+    1. Go to https://www.emailjs.com/ and create a free account
+    2. Create an Email Service (Gmail, Outlook, etc.) — note your SERVICE ID
+    3. Create an Email Template — note your TEMPLATE ID
+       In the template, use these variables:
+         {{from_name}}, {{reply_to}}, {{subject}}, {{message}}
+    4. Go to Account > API Keys — copy your PUBLIC KEY
+    5. Replace the placeholders below:
+         "YOUR_PUBLIC_KEY"  → your actual public key
+         "YOUR_SERVICE_ID"  → your email service ID
+         "YOUR_TEMPLATE_ID" → your email template ID
+    =====================================================
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Replace "YOUR_PUBLIC_KEY" with your actual EmailJS public key
+        emailjs.init("YOUR_PUBLIC_KEY");
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
