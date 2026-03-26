@@ -1819,6 +1819,9 @@ strong { color: var(--text); font-weight: 600; }
 }
 
 @media (max-width: 768px) {
+    /* Prevent horizontal overflow from waves/cards */
+    html, body { overflow-x: hidden; }
+
     .section { padding: 72px 0; }
 
     /* Mobile nav: hide resume link */
@@ -1870,11 +1873,15 @@ strong { color: var(--text); font-weight: 600; }
     /* Show photo on mobile, centered and smaller */
     .hero-visual {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 8px;
     }
-    .hero-photo-wrap { width: 220px; height: 220px; }
-    .hero-photo-frame { width: 160px; height: 200px; }
+    .hero-photo-wrap { width: 220px; height: 260px; }
+    .hero-photo-frame { width: 180px; height: 220px; }
+
+    /* Hide floating cards on mobile — they overlap the photo */
+    .hero-card { display: none; }
 
     /* Move stats ring below photo on mobile */
     .hero-stats-ring {
@@ -1884,7 +1891,22 @@ strong { color: var(--text); font-weight: 600; }
         gap: 20px;
         padding: 14px 20px;
         flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    /* About: single column on mobile, hide photo */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .about-photo-col { display: none; }
+
+    /* Day timeline: wider cards so text doesn't clip */
+    .day-item { flex: 0 0 200px; }
+
+    /* Radar chart: constrain to screen width */
+    .radar-card canvas { max-width: 260px; max-height: 260px; margin: 0 auto; display: block; }
 
     .projects-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
